@@ -84,7 +84,7 @@ RUN set -ex \
 	&& make -j"$(nproc)" \
 	&& make install \
 	\
-	&& apt-get purge -y --auto-remove $buildDeps \
+	#&& apt-get purge -y --auto-remove $buildDeps \
 	&& cd / \
 	&& rm -r /usr/src/ruby \
 	\
