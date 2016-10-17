@@ -10,6 +10,22 @@ RUN apt-get update \
 		libyaml-dev \
 		procps \
 		zlib1g-dev \
+		build-essential \
+		mysql-client \
+		libsasl2-dev \
+		libtool \
+		git \
+		libxml2 \
+		libxml2-dev \
+		libxslt1-dev \
+		liblzma-dev \
+		zlib1g-dev \
+		libmysqlclient-dev \
+		automake \
+		pkg-config \
+		libgmp-dev \
+		libzmq-dev \
+		snappy \
 	&& rm -rf /var/lib/apt/lists/*
 
 # skip installing gem documentation
