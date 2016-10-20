@@ -26,6 +26,7 @@ RUN apt-get update \
 		libgmp-dev \
 		libzmq-dev \
 		snappy \
+		imagemagick \
 	&& rm -rf /var/lib/apt/lists/*
 
 # skip installing gem documentation
@@ -59,7 +60,7 @@ RUN set -ex \
 		wget \
 	' \
 	&& apt-get update \
-	&& apt-get install -y --no-install-recommends $buildDeps \
+	&& apt-get install -y $buildDeps \
 	&& rm -rf /var/lib/apt/lists/* \
 	\
 	&& wget -O ruby.tar.gz "http://ftp.ruby-lang.org/pub/ruby/$RUBY_MAJOR/ruby-$RUBY_VERSION.tar.gz" \
